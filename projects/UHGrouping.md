@@ -55,4 +55,4 @@ const Preferences = ({ groupingPath }) => {
     };
 ```
 
-You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
+You can learn more at the [UH Groupings](https://www.hawaii.edu/its/uhgroupings/).
