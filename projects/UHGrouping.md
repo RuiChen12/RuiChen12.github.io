@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/micromouse/micromouse-square.jpg
 title: "Web Development - UH Groupings"
-date: 2025-01-22
+date: 08-01-2024 - current
 published: true
 labels:
   - React
