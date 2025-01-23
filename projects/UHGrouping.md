@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
+image: img/uhgrouping.png
 title: "Web Development - UH Groupings"
 date: 08-01-2024 - current
 published: true
