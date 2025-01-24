@@ -41,7 +41,7 @@
   ],
   "work": [
     {
-      "company": "UH Manoa - UH Groupings",
+      "company": "UH Information Technology Services",
       "position": "Web Developer",
       "website": "https://www.hawaii.edu/its/uhgroupings/",
       "startDate": "2024-08-01",
@@ -79,16 +79,16 @@
       ]
     },
     {
-      "organization": "",
+      "organization": "Kalani High School",
       "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
+      "position": "Member of Robotics Club",
+      "startDate": "2021-01-07",
+      "endDate": "2023-05-20",
+      "summary": "Collaborated with teammates to develop and optimize robotic control systems",
       "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
+        "Wrote and debugged code in Android Studio to enhance robot movement control",
+        "Optimized robotic performance through detailed testing and troubleshooting",
+        "Worked closely with a team to ensure seamless integration of hardware and software components"
       ]
     }
   ],
