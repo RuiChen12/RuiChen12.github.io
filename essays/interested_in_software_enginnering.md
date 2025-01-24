@@ -1,54 +1,36 @@
 ---
 layout: essay
 type: essay
-title: "The difficult things will always be difficult"
+title: "Exploring My Passion for Software Engineering and Future Aspirations"
 # All dates must be YYYY-MM-DD format!
-date: 2016-02-06
-published: false
+date: 2025-01-23
+published: true
 labels:
-  - Engineering
+  - Software Engineering
 ---
 
 <img width="200px" class="rounded float-start pe-4" src="../img/difficulty/degree_difficulty.jpg">
 
-*Difficulty: a thing that is hard to accomplish, deal with, or understand.*
+*Exploring My Passion for Software Engineering and Future Aspirations*
 
-One of my friends asked the question earlier last week -- why is it so hard to be an officer for the student branch? Why is so hard compared to working at my on-campus job? This question came after he struggled a little with bookkeeping for the student organization.
+Software engineering has always fascinated me because it combines creativity and problem-solving to build solutions that impact the world. From games to web applications, I am drawn to the endless possibilities of designing systems that improve people's lives. My journey into this field started with a love for games, and as I explored programming in high school and university, my interest grew stronger. Through hands-on projects and real-world experiences, I have discovered the joy of creating, learning, and overcoming challenges.
 
-Now I gave him the standard answer - being an officer of an organization requires that you manage your time between school and work. There isn't anyone telling you what to do. It's the answer any good mentor would give, and is mostly true.
+## Discovering My Interest in Software Engineering
 
-But the more I though about it, the more I wondered to myself...damn that's a really great question; it's one that deserves some more thought. Most people I think stop at the answer I gave previously - he obviously isn't managing his time properly.
+My first steps into software engineering began with my childhood passion for games. In high school, I dreamed of making my own game and decided to take a programming course. Python was the first language I learned, and I used it to create a project called Aircraft Fight Game. With the help of YouTube tutorials, I taught myself how to use Pygame and built a 2D shooter game where players control an aircraft to defeat enemies. Completing this project—from designing gameplay to debugging code—was incredibly satisfying and showed me the power of programming to bring ideas to life.
 
-Here's what I think: the difficult things will always be difficult.
+Later, I explored mobile app development with React Native, which introduced me to concepts like user authentication, database integration, and dynamic interfaces. At first, I struggled with small but frustrating challenges, like figuring out how to add free icons to my app. However, I learned to overcome these difficulties through persistence. Each small victory strengthened my passion for software engineering and encouraged me to dive deeper into this exciting field.
 
-## In the context of programming
+## Building on Early Foundations in University
 
-In the context of programming, this has always been true. The difficult problems have always been different, although changes in technology can change the landscape quite a bit. "Business" type applications are the things that come to mind for me. Those types of applications are usually coupled in some way with people ... and people are awfully hard to deal with!
+When I entered university, I wanted to gain professional experience and apply my skills in real-world settings. During my first semester, I attended a career fair hoping to find an internship but was disappointed to learn that most opportunities required junior standing. Instead of giving up, I focused on building my skills and eventually joined the UH Groupings project.
 
-Consider that one of the most popular content management systems is also considered the most horrible - Wordpress. But really, is there anything that fills that need? If it was so easy in the first place, where is the solution? Where's the magic CMS that is designed well enough that everyone hops on the boat to use it?
+At UH Groupings, I worked as a web developer, learning React and Next.js to create responsive web applications. I also collaborated on backend development using Java to refactor APIs, ensuring smooth communication between the frontend and backend. This experience taught me how software can solve real-world problems by improving workflows and enhancing user experiences. Overcoming challenges, such as debugging complex features and quickly learning new frameworks, helped me grow as a developer and boosted my confidence in solving technical problems.
 
-Some things are just difficult - building applications that humans use is hard, and will probably be hard for at least the near future.
+## Future Goals and Areas of Growth
 
-## In the context of engineering
+Looking ahead, I want to deepen my knowledge in web development and focus on creating applications that are efficient, secure, and user-friendly. While I have experience building dynamic user interfaces with React and Next.js, I want to explore progressive web applications (PWAs), which provide features like offline functionality and push notifications to enhance user engagement.
 
-Ever hear people ragging on engineering companies for delivering late and way over budget? Well, some engineering jobs are really difficult, especially if the requirements and funding are undulating underneath you. Because of the nature of the problem, sometimes engineering firms require large amounts of engineers and workers, inviting further problems and delays.
+On the backend, I aim to strengthen my understanding of technologies like Node.js to build high-performance, real-time applications. Additionally, web security is an area I am eager to explore further. I want to learn how to build secure authentication systems and prevent vulnerabilities like cross-site scripting (XSS) or SQL injection to ensure user data is protected.
 
-The Honolulu Rail project at home has become this sort of poster child of failure, budget overrun and overall incompetence in Hawaii. Well, working though regulatory boards and fiscal procedures in Hawaii seems like it's a mind bogglingly difficult job to do. Granted, there might be some fishy stuff going on, but I refuse to believe that everyone is involved for nefarious reasons.
-
-The problem of creating an unprecedented public transportation backbone on an island is difficult! I'm not sure we would have done it right, even if the best people were involved.
-
-## In the context of relationships
-
-So in the end, we realize that all engineering and programming is there for a reason - to serve human needs. Maybe that's why those things are difficult, because they both involve humans and are for humans.
-
-Relationships, regardless if they're romantic or not take work. Humans are fickle creatures and relationships can come and go with the wind. To properly maintain something over time requires work. Family takes work. Marriage takes work. We live to figure out what works and what doesn't and hope that as we move forward we're improving.
-
-Relationships have always been difficult, and by nature will continue to be so.
-
-## Okay!
-
-So back to the original premise; why is being one of the club officers so difficult?
-
-And the final answer - it's supposed to be difficult, and it's supposed to challenge you, just like everything else that humans do that is difficult: programming, engineering, engaging in relationships, pondering the universe, etc.
-
-Ultimately the question you should really ask yourself if something if particularly difficult is then "is it worth it"? That is something that is context specific and only you can answer yourself.
+By expanding my skills in these areas, I hope to create applications that are not only fast and reliable but also safe and accessible to users. These goals reflect my commitment to growing as a software engineer and contributing to meaningful projects in the future.
