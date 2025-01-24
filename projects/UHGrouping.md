@@ -32,7 +32,7 @@ To ensure the reliability and stability of the refactored APIs, I developed comp
 
 By combining frontend development expertise with backend refactoring and rigorous testing, I contributed to the success of UH Groupings, delivering a responsive, scalable, and user-friendly solution that streamlined grouping management across the University of Hawaii.
 
-Here is some code that illustrates how I read values from the line sensors:
+Here is some code that illustrates how I develop a page called preferences:
 
 ```react
 const Preferences = ({ groupingPath }) => {
