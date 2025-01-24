@@ -13,9 +13,7 @@ summary: "Developed a website called UH Grouping, developed and optimized web ap
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
+  <img width="200px" src="../img/uhgrouping.png" class="img-thumbnail" >
 </div>
 
 UH Groupings is an advanced online platform designed to organize and manage groupings of individuals affiliated with the University of Hawaii. These groupings can be created based on predefined attributes such as roles (students, faculty, staff), campuses, EAC codes, or through complex combinations. Custom groupings can also be manually defined by grouping owners to address specific business or communication needs. Once established, groupings can be leveraged for various purposes, including access control to online resources, managing email distribution lists, and automating de-provisioning processes.
