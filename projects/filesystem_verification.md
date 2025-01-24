@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/isabelle_logo.png
+image: img/isabelle.png
 title: File System Verification
 date: 03/01/2024 - current
 published: true
