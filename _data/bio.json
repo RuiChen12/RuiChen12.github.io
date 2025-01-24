@@ -25,7 +25,7 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "Windows11", "Git/GitHub"]
+      "keywords": [ "Windows11", "Git/GitHub","IntelliJ", "VS code"]
     }
   ],
   "education": [
@@ -33,7 +33,7 @@
       "institution": "University of Hawaii, Honolulu, HI",
       "area": "Computer Science (expected Spring, 2027)",
       "studyType": "B.S.",
-      "startDate": "2024-08-01",
+      "startDate": "2023-08-01",
       "endDate": "Present",
       "courses": [
       ]
@@ -43,7 +43,7 @@
     {
       "company": "UH Manoa - UH Groupings",
       "position": "Web Developer",
-      "website": "",
+      "website": "https://www.hawaii.edu/its/uhgroupings/",
       "startDate": "2024-08-01",
       "endDate": "Present",
       "summary": "developer of UH groupings",
@@ -54,28 +54,28 @@
     },
     {
       "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
+      "position": "Undergraduate Research Assistant",
       "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
-      "summary": "",
+      "startDate": "2024-03-15",
+      "endDate": "Present",
+      "summary": "Formally verified the correctness of an OCaml-based file system using Isabelle",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Modeled and proved system invariants and properties, ensuring file operations and data integrity",
+        "Validated block-level management to guarantee consistent and error-free behavior"
       ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
+      "organization": "Bishop Mesesum",
+      "website": "",
+      "position": "Volunteer of Botanical Department",
+      "startDate": "2022-06-01",
+      "endDate": "2022-07-29",
+      "summary": "Digitization specialist for plant specimen collections",
       "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
+        "Classify and catalog large collections of plant specimens",
+        "Photograph and digitize specimens to create online archives for researchers and the public"
       ]
     },
     {
@@ -95,15 +95,15 @@
   "awards": [
     {
       "title": "B+ Scholarship",
-      "date": "2013-Present",
+      "date": "2024-Present",
       "awarder": "State of Hawaii",
       "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
     },
     {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "The Arakawa Science, Technology Engineering and Math Endowed Scholarship",
+      "date": "2024 fall and 2025 spring",
+      "awarder": "University of Hawaii",
+      "summary": "Glen Y. Arakawa, a 1969 UH College of Engineering graduate, built a career in radar systems and microelectronics before transitioning to real estate investment in 1982. A strong supporter of STEM education, he established a scholarship endowment to assist future scientists and engineers."
     }
   ],
   "references": [
