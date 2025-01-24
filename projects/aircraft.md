@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/aircraft.png
+image: aircraft_logo.png
 title: Aircraft Fight Game
 date: 02/11/2022
 published: true
