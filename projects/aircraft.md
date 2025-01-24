@@ -13,7 +13,9 @@ summary: "Developed a game called Aircraft Fight Game based on the Pygame shoote
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
+  <img width="200px" src="../img/boss_1.png" class="img-thumbnail" >
+  <img width="200px" src="../img/enemy_1.png" class="img-thumbnail" >
+  <img width="200px" src="../img/supply.png" class="img-thumbnail" >
 </div>
 
 For this project, I created Aircraft Fight Game, a fun 2D shooting game using Python and Pygame. In the game, players control an aircraft that moves up, down, left, or right while automatically firing bullets at enemies. The enemies come in three sizes—small, medium, and large—each with a health bar that decreases when hit. Players earn points by destroying enemies, with larger enemies awarding more points: small planes give 100 points, medium planes 200, and large planes 300. As the game goes on, enemies move faster, making it harder for the player. The player’s aircraft starts with three lives, losing one whenever it gets hit. The game ends when all lives are lost. To make the game more exciting, supply drops appear during gameplay, offering upgrades like more powerful weapons, faster firing, or extra lives.
