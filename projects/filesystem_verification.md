@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/filesystem_logo.jpg
+image: img/filesystem_logo.png
 title: File System Verification
 date: 03/01/2024 - current
 published: true
