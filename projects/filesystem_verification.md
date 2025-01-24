@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/filesystem_logo.png
+image: img/isabelle_logo.png
 title: File System Verification
 date: 03/01/2024 - current
 published: true
@@ -12,9 +12,7 @@ summary: "Formally verified the correctness of an OCaml-based file system, inclu
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
+  <img width="200px" src="../img/isabelle_content.png" class="img-thumbnail" >
 </div>
 
 In this project, I verified the correctness of a file system written in OCaml by using Isabelle, a tool for formal proofs. OCaml is a functional programming language known for its strong type system, which helps build reliable software. The file system was designed to manage files using blocks, with operations for creating, deleting, and reading files. It also enforced strict rules, such as keeping file names within a certain size, ensuring data fits within blocks, and maintaining consistency in block size for all operations. My role was to prove that these rules were always followed and that the file system worked correctly under all conditions.
