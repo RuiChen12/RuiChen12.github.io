@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/uhgrouping_logo.png
+image: img/uhgroupings_logo.png
 title: "Web Development - UH Groupings"
 date: 08-01-2024 - current
 published: true
