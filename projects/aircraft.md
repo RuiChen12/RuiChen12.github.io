@@ -6,10 +6,10 @@ title: Aircraft Fight Game
 date: 02/11/2022
 published: true
 labels:
-  - Robotics
-  - Arduino
-  - C++
-summary: "Formally verified the correctness of an OCaml-based file system, including file operations, data integrity, and block-level management, by modeling and proving system invariants and properties using Isabelle."
+  - Python
+  - Game Development
+  - Pygame
+summary: "Developed a game called Aircraft Fight Game based on the Pygame shooter framework, featuring player-controlled aircraft, dynamic enemy interactions, collectible power-ups, and increasing difficulty through modular and scalable design."
 ---
 
 <div class="text-center p-4">
