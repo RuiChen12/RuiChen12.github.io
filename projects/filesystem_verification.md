@@ -6,9 +6,8 @@ title: File System Verification
 date: 03/01/2024 - current
 published: true
 labels:
-  - Robotics
-  - Arduino
-  - C++
+  - Ocaml
+  - Isabelle
 summary: "Formally verified the correctness of an OCaml-based file system, including file operations, data integrity, and block-level management, by modeling and proving system invariants and properties using Isabelle."
 ---
 
