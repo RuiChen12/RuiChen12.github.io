@@ -20,6 +20,7 @@ In the world of software development, smart questions are essential for smart so
 ## What’s a smart question?
 
 There are several core features of smart questions:
+
     1. Clear title: The title should accurately describe the problem, rather than asking a general question like "Can anyone help me?"
 
     2. Show your attempts: Showing the code you have tried and the documents you have studied can make it easier for the answerer to understand your problem.
@@ -27,7 +28,8 @@ There are several core features of smart questions:
     3. Provide enough information: Include your development environment, error messages, code snippets, etc., so that others can effectively help you troubleshoot the problem.
 
     4. Be polite and respectful: Although technology is more important than politeness, proper politeness can increase the possibility of getting help.
-In the following example, we examine the components of a decent question. In this case, the asker is trying to figure out a way to get the date of the previous month in Python.
+    
+In the following example, we will analyze a real-world example of a coding question regarding a "todos.map is not a function" error in a React application.
 
 ```
 Q: python date of the previous month
