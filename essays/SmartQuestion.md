@@ -4,7 +4,7 @@ type: essay
 title: "Smart Questions, Good Answers"
 # All dates must be YYYY-MM-DD format!
 date: 2015-09-08
-published: false
+published: true
 labels:
   - Questions
   - Answers
@@ -112,9 +112,9 @@ I'm getting error todos.map is not a function, only that line gives error if I r
 Please someone explain this, todos is an array then why the mapping is not working here.
 ```
 
-On Stack Overflow, the question "todos.map is not a function" is an example that partially meets the standards of a smart question. The asker identifies the specific error message, todos.map is not a function and describes the conditions under which the issue occurs. They also provide a portion of the code, showing how the data is retrieved rather than just describing the error. Additionally, the asker expresses their confusion—todos is supposed to be an array, yet the .map() function does not work—demonstrating that they have engaged in some logical reasoning before posting the question. However, the question still has several shortcomings that prevent responders from providing efficient assistance.
+On Stack Overflow, the question "Getting data.map is not a function" is a partial example of a smart question. The asker clearly states the error message and describes when it happens. They also share part of their code, showing how they get the data instead of just describing the problem. Additionally, they explain their confusion—todos should be an array, but .map() is not working. This shows they thought about the issue before asking. However, the question has some weaknesses that make it harder for others to give a useful answer.
 
-First, the title is too vague—it only states the error message without specifying the context in which the error occurs. A better title would be something more specific, such as "todos.map error in React useEffect, possibly related to localStorage", which would immediately indicate to responders that the issue may be connected to useEffect or localStorage. Second, the asker assumes that todos is an array but does not provide debugging information, such as console.log(todos), to confirm this assumption. Since data stored in localStorage is by default a string, the asker should first verify the data type instead of relying solely on intuition. Additionally, the asker does not realize that the line localStorage.setItem("todos", JSON.stringify("todos")) stores the string "todos" rather than an array. If localStorage.getItem("todos") returns a string, directly using JSON.parse() to parse it could lead to an unexpected data format, causing the .map() error. Finally, the asker mentions that "removing the div allows the code to work," but does not explain how div might affect the execution of todos.map(). This lack of clarity makes it difficult for responders to provide a comprehensive answer.
+First, the title is too general. It only states the error without saying where it happens. A better title would be something like "todos.map error in React useEffect, possibly related to localStorage", which immediately gives more context. Second, the asker assumes todos is an array but does not provide debugging output, such as console.log(todos), to confirm it. Since localStorage stores everything as a string, they should first check the data type instead of assuming. Also, the asker does not realize that the line localStorage.setItem("todos", JSON.stringify("todos")) saves the string "todos" instead of an actual array. If localStorage.getItem("todos") returns a string, using JSON.parse() on it could cause an unexpected data format, leading to the .map() error. Finally, the asker notes that "removing the div allows the code to work," but does not explain how the <div> might be affecting todos.map(). This missing detail makes it harder for others to fully understand and solve the problem.
 
 ```
 A: 
@@ -135,31 +135,60 @@ if (Array.isArray(todosLocal) && todosLocal.length > 0) ...
 
 ```
  
-Nevertheless, the community still provided some effective answers. One of the respondents identified the core issue: localStorage.getItem("todos") might return a string instead of an array, which prevents .map() from functioning. They suggested that the asker should check whether todosLocal is an array rather than just checking its length. However, while this answer points out the problem, it is not particularly efficient.
+Even though the question was not perfect, the community still provided some useful answers. One answer correctly pointed out that localStorage.getItem("todos") might return a string instead of an array, which would cause the .map() function to fail. The answer also suggested checking if todosLocal is really an array instead of just checking its length. While this was helpful, it could have been more effective.
 
-If the asker had provided a more detailed description in the question, such as "I am using useEffect in React to retrieve todos from localStorage and then attempt to iterate over it with .map(), but I am encountering a todos.map is not a function error. If I remove the "div", the code runs fine. All other functions and components are working properly." and further asked "Why is todos, not an array? Why does the error disappear when I remove the "div"? How should I correctly store and retrieve array data from localStorage?", the responses might have been more precise and helpful.
-
-For example, a respondent might have guided the asker to debug the issue using console.log(todosLocal) to directly verify the data type. Additionally, the respondent could have pointed out that localStorage.setItem("todos", JSON.stringify("todos")) is an incorrect way to store the data and explained the proper method—storing an actual array using JSON.stringify(todos), rather than the string "todos".
-
-This case illustrates that an unclear question can prevent respondents from providing the most effective assistance. While the asker received a partially helpful response, a more complete background in the question could have led to a more precise and efficient solution, reducing unnecessary back-and-forth communication. It also highlights the importance of asking smart questions in technical communities—well-formed questions are more likely to capture the attention of experts and lead to faster problem resolution, whereas unclear questions can result in inefficient discussions or even be ignored entirely.
-
-## The foolproof way to get ignored.
-
-While there are decent questions that benefit everyone, there are those one can ask to create an entirely different effect. In the following example, a user asks how he would, in short, create a desktop application with Facebook.
-
+If the asker had given more details, such as:
 ```
-Q: Facebook Desktop Notifier
-
-I am a beginner programmer that have never used anything other than what's included in a language.
-
-I am trying to create a desktop application that notifies me anytime I get an update onfacebook. 
-How should go about doing this? Thanks in advance.
-
-edit Sorry I was not clear. Is there any way to make a DESKTOP application with facebook?
+"I am using useEffect in React to get todos from localStorage and use .map(), but I get a todos.map is not a function error. If I remove the <div>, the code works fine. All other functions and components are working correctly."
+```
+And then asked specific questions like:
+```
+"Why is todos not an array? Why does the error go away when I remove the <div>? What is the correct way to store and retrieve an array in localStorage?"
 ```
 
-A simple “yes” would have answered the question, but we know that’s not the sort of answer he or she is looking for. Fortunately, someone kindly responded with a link to Facebook’s developer website. The asker should have done more research on his or her potential project. Then further down the road, he or she could have asked more specific and detailed questions that wouldn’t require a thousand-paged response for a sufficient answer.
+Then, the responses might have been more precise and helpful. For example, someone might have suggested using console.log(todosLocal) to check the actual data type. They could have also pointed out that localStorage.setItem("todos", JSON.stringify("todos")) is incorrect because it stores the string "todos" instead of an array. A better way would be to use JSON.stringify(todos), which correctly stores the array.
 
-## Conclusion
+## a Good Case of a Good Question
 
-When we rely on others’ generosity and expertise to provide answers to our questions, it should hold that the question we ask should be one that leads to efficient and effective help that not only benefits us, but also the people we ask and others who might ask the same question in the future. Thus, if you have a question… make it a smart one! Asking questions may not always get you the best answer, but asking them in a way that will make others want to answer them will increase the success of finding a good solution and make it a positive experience on all sides.
+Here is an excellent example of a question that meets most of the criteria for a smart question and successfully sparks a valuable discussion. The questioner clearly describes the problem they face, which is that the client browser caches JavaScript files, resulting in users not being able to see the latest code updates immediately. He also provides their current solution - by adding a version number to the file name and incrementing the version number with each update. However, he also points out that this method may become tedious to manually update the reference on each release, so he hopes that the community can provide a better way.
+
+```
+Q: How can I force clients to refresh JavaScript files?
+
+We are currently working in a private beta and so are still in the process of making fairly rapid changes, although obviously as usage is starting to ramp up, we will be slowing down this process. That being said, one issue we are running into is that after we push out an update with new JavaScript files, the client browsers still use the cached version of the file and they do not see the update. Obviously, on a support call, we can simply inform them to do a ctrlF5 refresh to ensure that they get the up-to-date files from the server, but it would be preferable to handle this before that time.
+
+Our current thought is to simply attach a version number onto the name of the JavaScript files and then when changes are made, increment the version on the script and update all references. This definitely gets the job done, but updating the references on each release could get cumbersome.
+
+As I'm sure we're not the first ones to deal with this, I figured I would throw it out to the community. How are you ensuring clients update their cache when you update your code? If you're using the method described above, are you using a process that simplifies the change?
+```
+The questioner clearly explains the problem's background, mentioning that they are in a private beta phase with frequent code updates. They face an issue where client browsers cache old JavaScript files, preventing users from seeing the latest updates. They describe the impact of this problem—users not receiving new features or bug fixes—and introduce their current solution: adding a version number to JavaScript file names to force updates. However, they recognize that manually updating file references with each release could become tedious. Instead of simply asking how to force JavaScript updates, the questioner shares their thought process and previous attempts. They also acknowledge that other developers must have faced this issue before and seek better methods from the community. The question is both open-ended and specific. It does not have just one correct answer but invites different solutions, such as modifying URL parameters, using ETags, or configuring cache control. At the same time, it remains focused on a concrete technical issue rather than asking a vague question like "How do I handle JavaScript caching?" This approach makes it easier for experienced developers to provide high-quality answers and helps others with the same issue find useful solutions. This shows High-quality questions also bring high-quality replies. This post was viewed by 600,000 people and received 700 likes.
+
+```
+A: 
+
+As far as I know a common solution is to add a ?<version> to the script's src link.
+
+For instance:
+
+<script type="text/javascript" src="myfile.js?1500"></script>
+
+    I assume at this point that there isn't a better way than find-replace to increment these "version numbers" in all of the script tags?
+
+You might have a version control system do that for you? Most version control systems have a way to automatically inject the revision number on check-in for instance.
+
+It would look something like this:
+
+<script type="text/javascript" src="myfile.js?$$REVISION$$"></script>
+
+Of course, there are always better solutions like this one.
+
+```
+## Conclusion: The Importance of Smart Questions for Smart Engineers
+
+From the examples we analyzed, it is clear that asking smart questions is an important skill for software engineers. In technical communities like Stack Overflow, a well-formed question increases the chances of getting a helpful and efficient answer. A clear, detailed question saves time for both the person asking and those answering. It also helps others who may face the same issue in the future.
+
+In our first case, the question about todos.map is not a function that partially met the criteria for a smart question. The asker provided an error message and some code, showing they had put in some effort before asking. However, the question lacked debugging details, such as console output, and did not fully explain why removing the <div> affected the error. The answer given pointed out the core issue—that localStorage might return a string instead of an array—but it could have been more efficient. If the question had been clearer, the answer might have been more detailed and directly helped solve the problem faster.
+
+In contrast, the second case about forcing JavaScript file updates was a great example of a well-formed question. The asker described the problem in detail, explained their current solution, and asked for better alternatives. This encouraged experienced developers to share different approaches, leading to a useful discussion. The question was viewed by hundreds of thousands of people and received many helpful answers, showing how a well-structured question benefits not just the asker but the entire developer community.
+
+From these examples, we learn that smart questions lead to smart answers. A vague or poorly formed question may still get an answer, but it is less likely to be helpful or efficient. On the other hand, a well-structured question attracts high-quality responses, saves time, and helps the entire community. For software engineers, mastering the skill of asking smart questions is just as important as writing good code.
