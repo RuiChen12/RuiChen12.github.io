@@ -15,12 +15,18 @@ labels:
 
 ## Is there such thing as a stupid question?
 
-I’ve had instructors address a whole class and say, “There’s no such thing as a stupid question.” I now know that is in fact not true because I’ve challenged the statement and received the appropriate dumb-stricken, annoyed look. There are definitely stupid questions, and along with that, usually unhelpful answers. Though we all might be guilty of being callous and making people victim to our poorly formed questions, there are steps we can take to ask smarter questions that hopefully don’t illicit the dreaded “rtfm” or “stfw” response.
+In the world of software development, smart questions are essential for smart software engineers. Engineers have limited time and energy, so they prefer to invest in well-formed, valuable questions rather than decipher vague or poorly structured help requests. A well-crafted question clearly expresses the problem, provides enough context for a quick diagnosis, and demonstrates the questioner's effort—rather than forcing the answerer to guess what’s wrong. However, many people do not know how to ask questions effectively, leading to their queries being ignored or even causing frustration among experienced developers. Asking technical questions is a skill that must be mastered in developer communities and forums, as a good question not only helps the asker receive precise and useful answers but also benefits future developers who encounter the same issue. Poorly structured questions, on the other hand, can confuse or irritate potential answerers, reducing the likelihood of getting help. So, how can we ask smart questions?
 
 ## What’s a smart question?
 
-Stack Overflow, a question and answer site for programmers, is a great resource for anyone who may have issues with code or who may simply want to learn new or different methods of doing something. There I found examples of good questions and bad questions, which could probably be improved.
+There are several core features of smart questions:
+    1. Clear title: The title should accurately describe the problem, rather than asking a general question like "Can anyone help me?"
 
+    2. Show your attempts: Showing the code you have tried and the documents you have studied can make it easier for the answerer to understand your problem.
+
+    3. Provide enough information: Include your development environment, error messages, code snippets, etc., so that others can effectively help you troubleshoot the problem.
+
+    4. Be polite and respectful: Although technology is more important than politeness, proper politeness can increase the possibility of getting help.
 In the following example, we examine the components of a decent question. In this case, the asker is trying to figure out a way to get the date of the previous month in Python.
 
 ```
