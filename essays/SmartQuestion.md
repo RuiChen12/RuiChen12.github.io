@@ -32,58 +32,116 @@ There are several core features of smart questions:
 In the following example, we will analyze a real-world example of a coding question regarding a "todos.map is not a function" error in a React application.
 
 ```
-Q: python date of the previous month
+Q: Getting data.map is not a function
 
-I am trying to get the date of the previous month with python. Here is what i've tried:
+import { useState, useEffect } from "react";
+import { TodoProvider } from "./contexts/TodoContext";
+import TodoForm from "./components/TodoForm";
+import TodoItem from "./components/TodoItem";
 
-str( time.strftime('%Y') ) + str( int(time.strftime('%m'))-1 )
+function App() {
+  const [todos, setTodos] = useState([]);
 
-However, this way is bad for 2 reasons: First it returns 20122 for the February of 2012 (instead of 201202) 
-and secondly it will return 0 instead of 12 on January.
+  const addTodo = (todo) => {
+    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
+  };
 
-I have solved this trouble in bash with:
+  const updateTodo = (id, todo) => {
+    setTodos((prev) =>
+      prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo))
+    );
+  };
 
-echo $(date -d"3 month ago" "+%G%m%d")
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id));
+  };
 
-I think that if bash has a built-in way for this purpose, then python, much more equipped, should provide something 
-better than forcing writing one's own script to achieve this goal. Of course i could do something like:
+  const toggleComplete = (id) => {
+    setTodos((prev) =>
+      prev.map((prevtodo) =>
+        prevtodo.id === id
+          ? { ...prevtodo, completed: !prevtodo.completed }
+          : prevtodo
+      )
+    );
+  };
 
-if int(time.strftime('%m')) == 1:
-    return '12'
-else:
-    if int(time.strftime('%m')) < 10:
-        return '0'+str(time.strftime('%m')-1)
-    else:
-        return str(time.strftime('%m') -1)
-        
-I have not tested this code and i don't want to use it anyway (unless I can't find any other way:/)
+  useEffect(() => {
+    const todosLocal = JSON.parse(localStorage.getItem("todos"));
 
-Thanks for your help!
+    if (todosLocal && todosLocal.length > 0) {
+      setTodos(todosLocal);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify("todos"));
+  }, [todos]);
+
+  return (
+    <TodoProvider
+      value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
+    >
+      <h2 className="text-center text-3xl font-bold mt-1">Hello</h2>
+      <div className="bg-[#172842] min-h-screen py-8">
+        <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
+          <h1 className="text-2xl font-bold text-center mb-8 mt-2">
+            Manage Your Todos
+          </h1>
+          <div className="mb-4">
+            {/* Todo form goes here */}
+            <TodoForm />
+          </div>
+          <div className="flex flex-wrap gap-y-3">
+            {todos.map((todo) => (
+              <div key={todo.id} className="w-full">
+                <TodoItem todo={todo} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </TodoProvider>
+  );
+}
+
+export default App;
+
+I'm getting error todos.map is not a function, only that line gives error if I remove the div of the mapping then the code works fine. All the other functions and components works fine, then why is this not working.
+
+Please someone explain this, todos is an array then why the mapping is not working here.
 ```
 
-While the heading of his question could be better, it does convey what he’s trying to figure out. Usually something as brief as “python date of previous month” is what other users would enter in as search terms on Google, making it easily found. Another good thing about the question is that it’s not just a question. The asker shows what he or she has done and that he or she has put in some effort to answer the question. And while it may not be as important as the question itself, the asker shows courtesy, which does increase the chance of getting an answer.
+On Stack Overflow, the question "todos.map is not a function" is an example that partially meets the standards of a smart question. The asker clearly identifies the specific error message, todos.map is not a function, and describes the conditions under which the issue occurs. They also provide a portion of the code, showing how the data is retrieved rather than just describing the error. Additionally, the asker expresses their confusion—todos is supposed to be an array, yet the .map() function does not work—demonstrating that they have engaged in some logical reasoning before posting the question. However, the question still has several shortcomings that prevent responders from providing efficient assistance.
+
+First, the title is too vague—it only states the error message without specifying the context in which the error occurs. A better title would be something more specific, such as "todos.map error in React useEffect, possibly related to localStorage", which would immediately indicate to responders that the issue may be connected to useEffect or localStorage. Second, the asker assumes that todos is an array but does not provide debugging information, such as console.log(todos), to confirm this assumption. Since data stored in localStorage is by default a string, the asker should first verify the data type instead of relying solely on intuition. Additionally, the asker does not realize that the line localStorage.setItem("todos", JSON.stringify("todos")) actually stores the string "todos" rather than an array. If localStorage.getItem("todos") returns a string, directly using JSON.parse() to parse it could lead to an unexpected data format, causing the .map() error. Finally, the asker mentions that "removing the <div> allows the code to work," but does not explain how <div> might affect the execution of todos.map(). This lack of clarity makes it difficult for responders to provide a comprehensive answer.
 
 ```
-A: datetime and the datetime.timedelta classes are your friend.
+A: 
 
-1. find today
-2. use that to find the first day of this month.
-3. use timedelta to backup a single day, to the last day of the previous month.
-4. print the YYYYMM string you're looking for.
+My guess is the problem is you're assuming that localStorage is an array.
 
-Like this:
+const todosLocal = JSON.parse(localStorage.getItem("todos"));
 
- >>> import datetime
- >>> today = datetime.date.today()
- >>> first = datetime.date(day=1, month=today.month, year=today.year)
- >>> lastMonth = first - datetime.timedelta(days=1)
- >>> print lastMonth.strftime("%Y%m")
- 201202
- >>>
+    if (todosLocal && todosLocal.length > 0) {
+      setTodos(todosLocal);
+    }
+
+You need to check if todosLocal is an array, not just has a length.
+
+so:
+
+if (Array.isArray(todosLocal) && todosLocal.length > 0) ...
 
 ```
  
-The asker received six possible answers, and he or she was successful in inciting discussion from multiple users. The answers themselves were clear and were devoid of the rumored sarcasm and hostility of “hackers.” Since I myself have referenced this page and found it useful, I can confidently say that it is a good question.
+Nevertheless, the community still provided some effective answers. One of the respondents identified the core issue: localStorage.getItem("todos") might return a string instead of an array, which prevents .map() from functioning. They suggested that the asker should check whether todosLocal is an array rather than just checking its length. However, while this answer points out the problem, it is not particularly efficient.
+
+If the asker had provided a more detailed description in the question, such as "I am using useEffect in React to retrieve todos from localStorage and then attempt to iterate over it with .map(), but I am encountering a todos.map is not a function error. If I remove the <div>, the code runs fine. All other functions and components are working properly." and further asked "Why is todos not an array? Why does the error disappear when I remove the <div>? How should I correctly store and retrieve array data from localStorage?", the responses might have been more precise and helpful.
+
+For example, a respondent might have guided the asker to debug the issue using console.log(todosLocal) to directly verify the data type. Additionally, the respondent could have pointed out that localStorage.setItem("todos", JSON.stringify("todos")) is an incorrect way to store the data and explained the proper method—storing an actual array using JSON.stringify(todos), rather than the string "todos".
+
+This case illustrates that an unclear question can prevent respondents from providing the most effective assistance. While the asker received a partially helpful response, a more complete background in the question could have led to a more precise and efficient solution, reducing unnecessary back-and-forth communication. It also highlights the importance of asking smart questions in technical communities—well-formed questions are more likely to capture the attention of experts and lead to faster problem resolution, whereas unclear questions can result in inefficient discussions or even be ignored entirely.
 
 ## The foolproof way to get ignored.
 
