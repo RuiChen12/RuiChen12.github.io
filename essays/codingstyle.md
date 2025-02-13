@@ -33,6 +33,7 @@ if condition
 do something else
 end
 ```
+This small mistake can mislead the reader, causing confusion about the logic and potentially resulting in bugs. In real-world projects, such issues can lead to time-consuming debugging and misunderstandings among team members. Languages like Python, ML, and OCaml rely on proper indentation not only for readability but also for the correctness of the program itself. Adhering to strict indentation rules ensures that the code is both functional and easy to understand, reducing the likelihood of errors and improving collaboration within a team.
 ## Coding Standards as a Team’s Signature
 
 Consistency in coding style is crucial for maintaining a clean and understandable codebase, especially when working in a team. Every organization often defines its own coding standards, reflecting its engineering culture. These standards go beyond simple formatting and include aspects such as naming conventions, method structures, and documentation styles. Let’s examine the following example of Java code:
