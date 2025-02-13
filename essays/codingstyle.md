@@ -6,192 +6,90 @@ title: "The Hidden Power of Coding Standards in Software Development"
 date: 2025-01-30
 published: true
 labels:
-  - Questions
-  - Answers
-  - StackOverflow
+  - Coding Style
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/software-engineering-programming.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/software-engineering-programming-style.png">
 
-## The Art of Asking Smart Questions in Software Development
+## Introduction: Beyond the Surface of Coding Standards
 
-In the world of software development, smart questions are essential for smart software engineers. Engineers have limited time and energy, so they prefer to invest in well-formed, valuable questions rather than decipher vague or poorly structured help requests. A well-crafted question clearly expresses the problem, provides enough context for a quick diagnosis, and demonstrates the questioner's effort—rather than forcing the answerer to guess what’s wrong. However, many people do not know how to ask questions effectively, leading to their queries being ignored or even causing frustration among experienced developers. Asking technical questions is a skill that must be mastered in developer communities and forums, as a good question not only helps the asker receive precise and useful answers but also benefits future developers who encounter the same issue. Poorly structured questions, on the other hand, can confuse or irritate potential answerers, reducing the likelihood of getting help. So, how can we ask smart questions?
+Many people think of coding standards as just small details—like how much to indent, or whether to put a curly brace on a new line. But they are much more than that. Coding standards play a big role in making code clear, easy to maintain, and simple to work on with others. In this essay, I’ll talk about how coding standards help improve readability, why they’re important in real-life projects, and how they show up in things like pull request reviews. Coding standards aren’t just rules—they make it easier for everyone to work together and keep the codebase in good shape.
 
-## What’s a smart question?
+## The Role of Coding Standards in Code Readability
 
-There are several core features of smart questions:
-
-    1. Clear title: The title should accurately describe the problem, rather than asking a general question like "Can anyone help me?"
-
-    2. Show your attempts: Showing the code you have tried and the documents you have studied can make it easier for the answerer to understand your problem.
-
-    3. Provide enough information: Include your development environment, error messages, code snippets, etc., so that others can effectively help you troubleshoot the problem.
-
-    4. Be polite and respectful: Although technology is more important than politeness, proper politeness can increase the possibility of getting help.
-    
-In the following example, we will analyze a real-world example of a coding question regarding a "todos.map is not a function" error in a React application.
+Readable code is maintainable code, and coding standards are essential for achieving this. When code lacks consistent formatting, it can create confusion and lead to errors, making it harder for team members or future developers to understand or modify. One of the most important aspects of formatting is indentation, which defines the structure of code blocks. This is especially critical in languages like ML and OCaml, which do not use braces or other explicit markers to indicate code blocks. In such cases, indentation is the only way to show relationships between statements. Poor indentation can create significant misunderstandings. For example, consider the following pseudo-code:
 
 ```
-Q: Getting data.map is not a function
+if condition
+    do something
+    do something else
+end
+```
+In this example, proper indentation clearly shows that both do something and do something else belong to the if block. However, if the indentation is incorrect, such as misaligning do something else, it may appear to be outside the if block:
 
-import { useState, useEffect } from "react";
-import { TodoProvider } from "./contexts/TodoContext";
-import TodoForm from "./components/TodoForm";
-import TodoItem from "./components/TodoItem";
+```
+if condition
+    do something
+do something else
+end
+```
+## Coding Standards as a Team’s Signature
 
-function App() {
-  const [todos, setTodos] = useState([]);
+Consistency in coding style is crucial for maintaining a clean and understandable codebase, especially when working in a team. Every organization often defines its own coding standards, reflecting its engineering culture. These standards go beyond simple formatting and include aspects such as naming conventions, method structures, and documentation styles. Let’s examine the following example of Java code:
 
-  const addTodo = (todo) => {
-    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
-  };
-
-  const updateTodo = (id, todo) => {
-    setTodos((prev) =>
-      prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo))
-    );
-  };
-
-  const deleteTodo = (id) => {
-    setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id));
-  };
-
-  const toggleComplete = (id) => {
-    setTodos((prev) =>
-      prev.map((prevtodo) =>
-        prevtodo.id === id
-          ? { ...prevtodo, completed: !prevtodo.completed }
-          : prevtodo
-      )
-    );
-  };
-
-  useEffect(() => {
-    const todosLocal = JSON.parse(localStorage.getItem("todos"));
-
-    if (todosLocal && todosLocal.length > 0) {
-      setTodos(todosLocal);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify("todos"));
-  }, [todos]);
-
-  return (
-    <TodoProvider
-      value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
-    >
-      <h2 className="text-center text-3xl font-bold mt-1">Hello</h2>
-      <div className="bg-[#172842] min-h-screen py-8">
-        <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
-          <h1 className="text-2xl font-bold text-center mb-8 mt-2">
-            Manage Your Todos
-          </h1>
-          <div className="mb-4">
-            {/* Todo form goes here */}
-            <TodoForm />
-          </div>
-          <div className="flex flex-wrap gap-y-3">
-            {todos.map((todo) => (
-              <div key={todo.id} className="w-full">
-                <TodoItem todo={todo} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </TodoProvider>
-  );
+```
+@GetMapping(value = "/owners/groupings")
+public ResponseEntity<String> ownerGroupings() {
+    logger.info("Entered REST ownerGroupings...");
+    String currentUid = policy.sanitize(userContextService.getCurrentUid());
+    String uri = String.format(API_2_1_BASE + "/owners/%s/groupings", currentUid);
+    return httpRequestService.makeApiRequest(currentUid, uri, HttpMethod.GET);
 }
 
-export default App;
-
-I'm getting error todos.map is not a function, only that line gives error if I remove the div of the mapping then the code works fine. All the other functions and components works fine, then why is this not working.
-
-Please someone explain this, todos is an array then why the mapping is not working here.
+/**
+ * Request the number of grouping paths owned by principal.
+ */
+@GetMapping(value = "/owners/groupings/count")
+public ResponseEntity<String> getNumberOfGroupings() {
+    logger.info("Entered REST getNumberOfGroupings...");
+    String currentUid = policy.sanitize(userContextService.getCurrentUid());
+    String uri = String.format(API_2_1_BASE + "/owners/%s/groupings/count", currentUid);
+    return httpRequestService.makeApiRequest(currentUid, uri, HttpMethod.GET);
+}
 ```
+There are several key observations in this example:
 
-On Stack Overflow, the question "Getting data.map is not a function" is a partial example of a smart question. The asker clearly states the error message and describes when it happens. They also share part of their code, showing how they get the data instead of just describing the problem. Additionally, they explain their confusion—todos should be an array, but .map() is not working. This shows they thought about the issue before asking. However, the question has some weaknesses that make it harder for others to give a useful answer.
+    Commenting Style: Each method is preceded by a clear and concise comment explaining its purpose. These comments provide helpful context for teammates, allowing them to understand the functionality without diving into the implementation details.
+    Consistent Structure: Both methods follow a standardized pattern:
+        Logging is consistently placed as the first statement, ensuring traceability.
+        Variables like currentUid and uri are descriptively named, making it immediately clear what they represent.
+        The format for API calls is uniform, improving readability and predictability.
 
-First, the title is too general. It only states the error without saying where it happens. A better title would be something like "todos.map error in React useEffect, possibly related to localStorage", which immediately gives more context. Second, the asker assumes todos is an array but does not provide debugging output, such as console.log(todos), to confirm it. Since localStorage stores everything as a string, they should first check the data type instead of assuming. Also, the asker does not realize that the line localStorage.setItem("todos", JSON.stringify("todos")) saves the string "todos" instead of an actual array. If localStorage.getItem("todos") returns a string, using JSON.parse() on it could cause an unexpected data format, leading to the .map() error. Finally, the asker notes that "removing the div allows the code to work," but does not explain how the <div> might be affecting todos.map(). This missing detail makes it harder for others to fully understand and solve the problem.
-
-```
-A: 
-
-My guess is the problem is you're assuming that localStorage is an array.
-
-const todosLocal = JSON.parse(localStorage.getItem("todos"));
-
-    if (todosLocal && todosLocal.length > 0) {
-      setTodos(todosLocal);
-    }
-
-You need to check if todosLocal is an array, not just has a length.
-
-so:
-
-if (Array.isArray(todosLocal) && todosLocal.length > 0) ...
-
-```
+Why does this consistency matter? When everyone adheres to the same coding standards, engineers can quickly comprehend code written by others without needing additional explanations. It reduces the cognitive load required to navigate large codebases and makes the codebase feel cohesive, even when multiple contributors are involved. On the other hand, if every team member followed their own preferences, the codebase would quickly become chaotic, leading to misunderstandings, inefficiencies, and wasted time. Consistent coding practices not only streamline collaboration but also reflect a team’s professionalism and commitment to high-quality engineering.
  
-Even though the question was not perfect, the community still provided some useful answers. One answer correctly pointed out that localStorage.getItem("todos") might return a string instead of an array, which would cause the .map() function to fail. The answer also suggested checking if todosLocal is really an array instead of just checking its length. While this was helpful, it could have been more effective.
-
-If the asker had given more details, such as:
+## Coding Standards in Practice: The Pull Request Workflow
+Code Reviews and PR Merges
+Pull requests (PRs) are a crucial part of modern software development, especially on platforms like GitHub. One of the first things reviewers look at when evaluating a PR is whether the code adheres to established coding standards. Following these standards ensures that the codebase remains clean, consistent, and easy to integrate. A well-structured and readable codebase not only reflects professionalism but also simplifies collaboration within the team. For example, my current team enforces strict rules for import statements to maintain clarity and avoid potential issues.
+Correct usage of imports looks like this:
 ```
-"I am using useEffect in React to get todos from localStorage and use .map(), but I get a todos.map is not a function error. If I remove the <div>, the code works fine. All other functions and components are working correctly."
+import java.util.List;
+import java.util.ArrayList;
 ```
-And then asked specific questions like:
+Incorrect usage, such as the following, is discouraged:
 ```
-"Why is todos not an array? Why does the error go away when I remove the <div>? What is the correct way to store and retrieve an array in localStorage?"
+import java.util.*;
 ```
+Why Avoid import *?
+There are two main reasons to avoid wildcard imports:
 
-Then, the responses might have been more precise and helpful. For example, someone might have suggested using console.log(todosLocal) to check the actual data type. They could have also pointed out that localStorage.setItem("todos", JSON.stringify("todos")) is incorrect because it stores the string "todos" instead of an array. A better way would be to use JSON.stringify(todos), which correctly stores the array.
+    Code Size: Using import * can pull in unnecessary classes or methods that are not used in the code. This can bloat the compiled program, increasing memory usage and load times, which can be especially problematic in large-scale applications.
 
-## a Good Case of a Good Question
+    Ambiguity: Importing entire packages can lead to naming conflicts. For instance, if both java.util.* and java.sql.* are imported, and both packages include a Date class, the compiler may struggle to resolve which one to use. This can result in bugs that are hard to track down, particularly when the error isn’t immediately obvious.
 
-Here is an excellent example of a question that meets most of the criteria for a smart question and successfully sparks a valuable discussion. The questioner clearly describes the problem they face, which is that the client browser caches JavaScript files, resulting in users not being able to see the latest code updates immediately. He also provides their current solution - by adding a version number to the file name and incrementing the version number with each update. However, he also points out that this method may become tedious to manually update the reference on each release, so he hopes that the community can provide a better way.
+Ignoring such standards during code reviews can lead to subtle but significant problems. For example, ambiguous imports might introduce naming conflicts that only surface in specific environments or when new dependencies are added. Similarly, unnecessarily large code imports can impact performance over time. By enforcing coding standards like clear, explicit imports, teams ensure that every line of code has a clear purpose and avoids potential conflicts. This discipline prevents technical issues and fosters trust and reliability within the development process. A clean, standard-compliant PR is easier to review, more likely to be merged quickly, and less likely to introduce regressions or other complications in the future.
 
-```
-Q: How can I force clients to refresh JavaScript files?
+## Conclusion
 
-We are currently working in a private beta and so are still in the process of making fairly rapid changes, although obviously as usage is starting to ramp up, we will be slowing down this process. That being said, one issue we are running into is that after we push out an update with new JavaScript files, the client browsers still use the cached version of the file and they do not see the update. Obviously, on a support call, we can simply inform them to do a ctrlF5 refresh to ensure that they get the up-to-date files from the server, but it would be preferable to handle this before that time.
-
-Our current thought is to simply attach a version number onto the name of the JavaScript files and then when changes are made, increment the version on the script and update all references. This definitely gets the job done, but updating the references on each release could get cumbersome.
-
-As I'm sure we're not the first ones to deal with this, I figured I would throw it out to the community. How are you ensuring clients update their cache when you update your code? If you're using the method described above, are you using a process that simplifies the change?
-```
-The questioner clearly explains the problem's background, mentioning that they are in a private beta phase with frequent code updates. They face an issue where client browsers cache old JavaScript files, preventing users from seeing the latest updates. They describe the impact of this problem—users not receiving new features or bug fixes—and introduce their current solution: adding a version number to JavaScript file names to force updates. However, they recognize that manually updating file references with each release could become tedious. Instead of simply asking how to force JavaScript updates, the questioner shares their thought process and previous attempts. They also acknowledge that other developers must have faced this issue before and seek better methods from the community. The question is both open-ended and specific. It does not have just one correct answer but invites different solutions, such as modifying URL parameters, using ETags, or configuring cache control. At the same time, it remains focused on a concrete technical issue rather than asking a vague question like "How do I handle JavaScript caching?" This approach makes it easier for experienced developers to provide high-quality answers and helps others with the same issue find useful solutions. This shows High-quality questions also bring high-quality replies. This post was viewed by 600,000 people and received 700 likes.
-
-```
-A: 
-
-As far as I know a common solution is to add a ?<version> to the script's src link.
-
-For instance:
-
-<script type="text/javascript" src="myfile.js?1500"></script>
-
-    I assume at this point that there isn't a better way than find-replace to increment these "version numbers" in all of the script tags?
-
-You might have a version control system do that for you? Most version control systems have a way to automatically inject the revision number on check-in for instance.
-
-It would look something like this:
-
-<script type="text/javascript" src="myfile.js?$$REVISION$$"></script>
-
-Of course, there are always better solutions like this one.
-
-```
-## Conclusion: The Importance of Smart Questions for Smart Engineers
-
-From the examples we analyzed, it is clear that asking smart questions is an important skill for software engineers. In technical communities like Stack Overflow, a well-formed question increases the chances of getting a helpful and efficient answer. A clear, detailed question saves time for both the person asking and those answering. It also helps others who may face the same issue in the future.
-
-In our first case, the question about todos.map is not a function that partially met the criteria for a smart question. The asker provided an error message and some code, showing they had put in some effort before asking. However, the question lacked debugging details, such as console output, and did not fully explain why removing the <div> affected the error. The answer given pointed out the core issue—that localStorage might return a string instead of an array—but it could have been more efficient. If the question had been clearer, the answer might have been more detailed and directly helped solve the problem faster.
-
-In contrast, the second case about forcing JavaScript file updates was a great example of a well-formed question. The asker described the problem in detail, explained their current solution, and asked for better alternatives. This encouraged experienced developers to share different approaches, leading to a useful discussion. The question was viewed by hundreds of thousands of people and received many helpful answers, showing how a well-structured question benefits not just the asker but the entire developer community.
-
-From these examples, we learn that smart questions lead to smart answers. A vague or poorly formed question may still get an answer, but it is less likely to be helpful or efficient. On the other hand, a well-structured question attracts high-quality responses, saves time, and helps the entire community. For software engineers, mastering the skill of asking smart questions is just as important as writing good code.
-
+Coding standards are not just guidelines; they are the backbone of producing clean, cohesive, and maintainable software. These standards ensure that code is easy to read, consistent across the team, and clear in its intent, which helps to minimize confusion and reduce errors. Whether it's maintaining proper indentation in languages like ML or Python, where structure directly impacts functionality, or avoiding ambiguous imports in Java to prevent naming conflicts, coding standards reflect a team’s commitment to delivering high-quality work. From my own experience, following coding standards does more than just improve the technical quality of the code—it fosters better collaboration, trust, and efficiency within a team. Consistency in the way we write and review code allows us to focus on solving problems rather than untangling someone else’s logic. As software engineers, adhering to these principles is not only a good practice but also a responsibility to the team and the project. By embracing coding standards, we build a stronger foundation for success, both individually and collectively.
 
 This essay was written with assistance from ChatGPT, which was used to refine wording, improve clarity, and structure the content.....
