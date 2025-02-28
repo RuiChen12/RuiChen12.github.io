@@ -10,7 +10,8 @@ labels:
   - UI Framework
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/smart-questions/rtfm.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/Modal1.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/Modal2.png">
 
 In web development, designing an efficient and visually appealing user interface is crucial. While it is possible to achieve this using raw HTML and CSS, UI frameworks like Bootstrap 5 provide a more streamlined and structured approach. These frameworks not only enhance development speed but also improve maintainability and consistency across projects.
 
