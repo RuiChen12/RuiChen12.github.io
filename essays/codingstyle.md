@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "The Hidden Power of Coding Standards in Software Development"
 # All dates must be YYYY-MM-DD format!
-date: 2025-01-30
+date: 2025-02-13
 published: true
 labels:
   - Coding Style
