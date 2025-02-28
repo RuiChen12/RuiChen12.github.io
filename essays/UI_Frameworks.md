@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "The Importance of UI Frameworks in Modern Web Development"
 # All dates must be YYYY-MM-DD format!
-date: 2025-01-30
+date: 2025-02-27
 published: true
 labels:
   - BootStrap5
