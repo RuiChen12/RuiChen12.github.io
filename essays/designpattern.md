@@ -14,6 +14,7 @@ labels:
 
 ## How Design Patterns Made My Code Feel Like a City
 
+
 Imagine you are visiting a new city. You notice it’s easy to find your way around. The sidewalks look the same everywhere, the streetlights are always at the corners, and there are parks in every neighborhood. No matter where you go, you can always see signs that help you get back to the main square. The city feels comfortable and organized. Why? Because the city designers followed some good ideas about how to build things, and they use these same ideas everywhere. They don’t make up new rules for every street—they reuse what already works.
 
 I think design patterns in coding are just like these smart ideas for building cities. They are not rules you must follow; they aren’t just step-by-step recipes. Instead, they are simple solutions that can help you fix common problems, so your code is easier to read, change, and reuse—just like a good city is easy to live in.
