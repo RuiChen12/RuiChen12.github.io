@@ -1,7 +1,7 @@
 ---
 layout: essay
 type: essay
-title: "How to Ask Effectively in Software Development"
+title: "Building with Patterns: Why Good Websites Are Like Good Cities"
 # All dates must be YYYY-MM-DD format!
 date: 2025-4-24
 published: true
@@ -10,9 +10,9 @@ labels:
   - Front-End
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/smart-questions/rtfm.png">
+<img width="300px" class="rounded float-start pe-4" src="../img/Website.jpg">
 
-## Building with Patterns: Why Good Websites Are Like Good Cities
+## How Design Patterns Made My Code Feel Like a City
 
 Imagine you are visiting a new city. You notice it’s easy to find your way around. The sidewalks look the same everywhere, the streetlights are always at the corners, and there are parks in every neighborhood. No matter where you go, you can always see signs that help you get back to the main square. The city feels comfortable and organized. Why? Because the city designers followed some good ideas about how to build things, and they use these same ideas everywhere. They don’t make up new rules for every street—they reuse what already works.
 
