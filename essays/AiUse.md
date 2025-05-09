@@ -48,19 +48,20 @@ Here are some examples of how I used AI (or didn’t) for each part of ICS 314:
   > “How do I pass props using Link in Next.js?”  
   It helped me build code like this:
 
-  ```tsx
-  <Link
-    href={{
-      pathname: '/clubs/profile',
-      query: {
-        name: club.name,
-        description: club.description,
-        image: club.image,
-        creator: club.creator,
-        email: club.email,
-      },
-    }}
-  >
+```tsx
+<Link
+  href={{
+    pathname: '/clubs/profile',
+    query: {
+      name: club.name,
+      description: club.description,
+      image: club.image,
+      creator: club.creator,
+      email: club.email,
+    },
+  }}
+>
+```
   I also used AI when I had bugs in the React state or layout issues in the UI.
 - **Learning a concept/tutorial**  
   I didn’t use AI to learn the basic concepts. When I studied the official tutorials for React, TypeScript, or HTML, I wanted to focus and learn from the source.
