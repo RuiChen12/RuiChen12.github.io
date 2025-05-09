@@ -11,8 +11,6 @@ labels:
   - Answers
 ---
 
-<img width="300px" class="rounded float-start pe-4" src="../img/smart-questions/rtfm.png">
-
 ## 1. How did you make your effort estimates?
 
 I made my effort estimates based on whether I had done similar tasks before. If I had experience with something similar, I would look at how much time it took me last time and then subtract a bit. For example, when I worked on the PictureSwitcher component on the landing page, it took me about 30 minutes to finish. So, since I had done it before, I estimated it would take 20 minutes next time.
