@@ -23,7 +23,7 @@ Here are some examples of how I used AI (or didn’t) for each part of ICS 314:
 - **Experience WODs (e.g. E18)**  
   In the beginning, for WODs like E18, I didn’t use AI at all. These tasks mostly involved basic JavaScript and simple logic, so I could do them by myself.  
   But later, when we started learning functional programming, I got confused with some functions. For example, in one WOD, I wasn’t sure if I should use `_.filter` or `_.map`, or how to combine them. So I asked ChatGPT:  
-  > “How do I use filter and map together in underscore?”  
+  > “How do I use the filter and map together in underscore?”  
   It showed me an example and helped me understand how to use them together. Still, I didn’t always use AI because these WODs didn’t affect my grade, and sometimes I liked solving the problems on my own.
 
 - **In-class Practice WODs**  
@@ -69,7 +69,7 @@ Here are some examples of how I used AI (or didn’t) for each part of ICS 314:
 - **Answering a question in class or Discord**
   I didn’t use AI to answer questions. I felt like if I could solve the problem, I should answer it myself. Also, if someone else asked a question, they could ask AI too—so I didn’t see the        point in using it for that.
   
-- **Asking or answering a smart-question**
+- **Asking or answering a smart question**
   I didn’t use AI here either. I didn’t do this very often, but when I did, I tried to rely on what I had already learned.
 
 - **Coding examples**
@@ -100,7 +100,7 @@ Here are some examples of how I used AI (or didn’t) for each part of ICS 314:
 - **Quality assurance**
   This was one of the most helpful uses of AI for me. Many times, I got strange ESLint or runtime errors. I copied the error and asked ChatGPT:
 
-    “Why am I getting 'property undefined' when accessing image in club object?”
+    “Why am I getting 'property undefined' when accessing an image in a club object?”
     It explained that maybe the object wasn’t loaded yet, and I should check for null.
     I also asked during Prisma errors:
     “Why is my migration failing with a relation error?”
@@ -133,7 +133,7 @@ But traditional methods are more strict and help you remember things better. AI 
 
 In the future, I think AI will become even more common in education. Maybe AI will write perfect code that fits your whole project. But that also means programmers will need to understand deeper skills—things AI can’t do yet.
 
-The challenge is: if AI gets too good, students might not learn enough. But if we learn how to use it wisely, AI can make education better for everyone.
+The challenge is: that if AI gets too good, students might not learn enough. But if we learn how to use it wisely, AI can make education better for everyone.
 
 
 ## VIII. Conclusion
