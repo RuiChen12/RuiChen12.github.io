@@ -3,7 +3,7 @@ layout: essay
 type: essay
 title: "Ai Use Reflection"
 # All dates must be YYYY-MM-DD format!
-date: 2015-09-08
+date: 2025-05-08
 published: true
 labels:
   - Questions
@@ -108,23 +108,39 @@ Here are some examples of how I used AI (or didn’t) for each part of ICS 314:
 
 - **Other uses**
   I don’t remember using AI for anything else. Mostly, I used it for debugging, writing code, and learning harder parts of React.
-## The foolproof way to get ignored.
+## III. Impact on Learning and Understanding
 
-While there are decent questions that benefit everyone, there are those one can ask to create an entirely different effect. In the following example, a user asks how he would, in short, create a desktop application with Facebook.
+AI helped me learn faster. It explained things I didn’t understand, especially with React and Next.js. I think many students use AI for the same reason: it’s like having a tutor who is always available.
 
-```
-Q: Facebook Desktop Notifier
+But sometimes I worry that I rely on it too much. If I always ask ChatGPT, I might forget how to solve problems on my own. So I try to use AI only when I need help.
 
-I am a beginner programmer that have never used anything other than what's included in a language.
 
-I am trying to create a desktop application that notifies me anytime I get an update onfacebook. 
-How should go about doing this? Thanks in advance.
+## IV. Practical Applications
 
-edit Sorry I was not clear. Is there any way to make a DESKTOP application with facebook?
-```
+Outside of class, I also used AI in my job. I work with React and Angular, and sometimes my CSS or icons don’t show up correctly. I ask AI, “Why is this image not centered?” or “How do I change the font size in CSS?” and it helps me fix things.
 
-A simple “yes” would have answered the question, but we know that’s not the sort of answer he or she is looking for. Fortunately, someone kindly responded with a link to Facebook’s developer website. The asker should have done more research on his or her potential project. Then further down the road, he or she could have asked more specific and detailed questions that wouldn’t require a thousand-paged response for a sufficient answer.
+However, when I ask AI to generate full code, it sometimes doesn’t work with my current project. So I only use it for bug fixes or quick help, not full solutions.
 
-## Conclusion
+## IV. Challenges and Opportunities
+Sometimes AI gave me answers that didn’t work. For example, in our final project, we couldn’t figure out why a form wasn’t submitted. AI didn’t help much. Later, we found the problem was a small .url() string in a different file. This showed me that AI can’t always solve everything. However, I think AI still has many learning opportunities. It can be used to help students break down big problems, and even give feedback on their code.
 
-When we rely on others’ generosity and expertise to provide answers to our questions, it should hold that the question we ask should be one that leads to efficient and effective help that not only benefits us, but also the people we ask and others who might ask the same question in the future. Thus, if you have a question… make it a smart one! Asking questions may not always get you the best answer, but asking them in a way that will make others want to answer them will increase the success of finding a good solution and make it a positive experience on all sides.
+## VI. Comparative Analysis
+Traditional teaching is sometimes limited. For example, during the final project, the class content didn’t help with everything, so I used Google. AI is like a smarter version of Google—it gives you answers faster and with more explanation.
+
+But traditional methods are more strict and help you remember things better. AI is fast, but sometimes not deep. I think the best way is to use both together: teachers explain the hard parts, and AI helps when you’re stuck.
+
+## VII. Future Considerations
+
+In the future, I think AI will become even more common in education. Maybe AI will write perfect code that fits your whole project. But that also means programmers will need to understand deeper skills—things AI can’t do yet.
+
+The challenge is: if AI gets too good, students might not learn enough. But if we learn how to use it wisely, AI can make education better for everyone.
+
+
+## VIII. Conclusion
+
+AI helped me a lot in ICS 314. It explained errors, helped me understand web development, and made me more confident in solving problems. But I also learned to be careful and not rely on it too much. In the future, I hope classes can teach us how to use AI in smart ways—like how to ask good questions and understand the answers. AI is a great tool, but learning how to think is still the most important part.
+
+
+
+AI is being used to help with grammar
+
