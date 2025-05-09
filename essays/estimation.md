@@ -17,83 +17,28 @@ I made my effort estimates based on whether I had done similar tasks before. If 
 
 But if I hadn’t done something like that before, I would try to guess based on how much work I thought it would be. For example, when I created the Club page, I thought that just creating a simple page and doing some basic formatting would only take about 60 minutes or maybe even less.
 
-## What’s a smart question?
+## 2. Even though your estimates were always off, sometimes way off, was there any benefit from making effort estimates for the issues in advance? If so, what benefits? If not, why not?
 
-Stack Overflow, a question and answer site for programmers, is a great resource for anyone who may have issues with code or who may simply want to learn new or different methods of doing something. There I found examples of good questions and bad questions, which could probably be improved.
+I think there is definitely some benefit, but maybe not a huge one. Estimating in advance helps with time management, but when you're facing a problem you've never solved before, it's really hard to guess how much time it will take.
 
-In the following example, we examine the components of a decent question. In this case, the asker is trying to figure out a way to get the date of the previous month in Python.
+For example, like I said before, I created the Club Page. In the beginning (Milestone 1), we only made a mockup, and there was no real data, so it matched my estimate. But estimating something means I plan what I want to do and guess the time based on that. However, when we start building, we often get new ideas and want to add more features — and that part can't be estimated. So this makes the real-time difference from the estimate.
 
-```
-Q: python date of the previous month
+Also, when we work on things we've never done before, the estimate can be way off. For example, in Milestone 2, we tried to connect real data (like from Vercel) to the mockup page. I thought I could finish the database setup in 45 minutes because we did similar stuff in the digits assignment. But that was all on a local database.
 
-I am trying to get the date of the previous month with python. Here is what i've tried:
+With Vercel, it's different. Only one person was managing the database, and others couldn’t connect to it directly. On local databases, if we run db actions, they usually don’t give errors. But on Vercel, sometimes Prisma parameters couldn’t be found in dbaction, so it would cause errors.
 
-str( time.strftime('%Y') ) + str( int(time.strftime('%m'))-1 )
+To see those errors, we had to keep merging into the main branch again and again. And sometimes, the error was just a small thing — like a wrong parameter name, or an eslint error. But each time, we had to wait for testing and still might not fix it. This wasted a lot of time and caused a big gap between estimated and real effort.
 
-However, this way is bad for 2 reasons: First it returns 20122 for the February of 2012 (instead of 201202) 
-and secondly it will return 0 instead of 12 on January.
+## 3. Was there any benefit for tracking the actual effort expended on the issues? If so, what benefits? If not, why not? Was there any downside to estimating and tracking your effort? If so what?
 
-I have solved this trouble in bash with:
+I think tracking the actual time was helpful because it gave me a better idea of future estimates. After finishing a task, I could compare the real-time with what I guessed before. This helped me learn how to estimate more accurately next time.
 
-echo $(date -d"3 month ago" "+%G%m%d")
+As for the downsides, I don’t think there were any big ones. Tracking and estimating didn’t really slow me down or cause problems. Sometimes it took a bit of extra time to check the clock and write it down, but it was worth it.
+## 4. How did you track your actual effort? How accurate do you believe your tracking was?
+I tracked my actual effort by checking the time when I started and when I finished. But sometimes, if I was almost done or already halfway through and had more free time, I would let myself keep going and add extra time. I usually started at a round number, like 5:00 PM, and ended on a 15-minute mark, like 5:15, 5:30, 5:45, or 6:00.
 
-I think that if bash has a built-in way for this purpose, then python, much more equipped, should provide something 
-better than forcing writing one's own script to achieve this goal. Of course i could do something like:
+I don’t think my tracking was very accurate because it was hard to tell the difference between coding work and non-coding work. For example, thinking about new features, checking for bugs, or waiting for tests to finish — it’s hard to count those separately. But I also think there’s not much point in trying to separate coding and non-coding time exactly.
+## 5. How much overhead was there in tracking your effort? Did it take up a noticeable amount of time or inhibit you working on the project?
+Tracking effort didn’t really give me any extra burden, because I didn’t actually separate my work into coding and non-coding parts. After I finished a task, I would just give an estimate of how much time was coding and how much was non-coding, but it probably wasn’t very accurate.
 
-if int(time.strftime('%m')) == 1:
-    return '12'
-else:
-    if int(time.strftime('%m')) < 10:
-        return '0'+str(time.strftime('%m')-1)
-    else:
-        return str(time.strftime('%m') -1)
-        
-I have not tested this code and i don't want to use it anyway (unless I can't find any other way:/)
-
-Thanks for your help!
-```
-
-While the heading of his question could be better, it does convey what he’s trying to figure out. Usually something as brief as “python date of previous month” is what other users would enter in as search terms on Google, making it easily found. Another good thing about the question is that it’s not just a question. The asker shows what he or she has done and that he or she has put in some effort to answer the question. And while it may not be as important as the question itself, the asker shows courtesy, which does increase the chance of getting an answer.
-
-```
-A: datetime and the datetime.timedelta classes are your friend.
-
-1. find today
-2. use that to find the first day of this month.
-3. use timedelta to backup a single day, to the last day of the previous month.
-4. print the YYYYMM string you're looking for.
-
-Like this:
-
- >>> import datetime
- >>> today = datetime.date.today()
- >>> first = datetime.date(day=1, month=today.month, year=today.year)
- >>> lastMonth = first - datetime.timedelta(days=1)
- >>> print lastMonth.strftime("%Y%m")
- 201202
- >>>
-
-```
- 
-The asker received six possible answers, and he or she was successful in inciting discussion from multiple users. The answers themselves were clear and were devoid of the rumored sarcasm and hostility of “hackers.” Since I myself have referenced this page and found it useful, I can confidently say that it is a good question.
-
-## The foolproof way to get ignored.
-
-While there are decent questions that benefit everyone, there are those one can ask to create an entirely different effect. In the following example, a user asks how he would, in short, create a desktop application with Facebook.
-
-```
-Q: Facebook Desktop Notifier
-
-I am a beginner programmer that have never used anything other than what's included in a language.
-
-I am trying to create a desktop application that notifies me anytime I get an update onfacebook. 
-How should go about doing this? Thanks in advance.
-
-edit Sorry I was not clear. Is there any way to make a DESKTOP application with facebook?
-```
-
-A simple “yes” would have answered the question, but we know that’s not the sort of answer he or she is looking for. Fortunately, someone kindly responded with a link to Facebook’s developer website. The asker should have done more research on his or her potential project. Then further down the road, he or she could have asked more specific and detailed questions that wouldn’t require a thousand-paged response for a sufficient answer.
-
-## Conclusion
-
-When we rely on others’ generosity and expertise to provide answers to our questions, it should hold that the question we ask should be one that leads to efficient and effective help that not only benefits us, but also the people we ask and others who might ask the same question in the future. Thus, if you have a question… make it a smart one! Asking questions may not always get you the best answer, but asking them in a way that will make others want to answer them will increase the success of finding a good solution and make it a positive experience on all sides.
+I don’t think there’s much benefit in splitting everything into coding and non-coding work, so I didn’t try too hard to do that.
