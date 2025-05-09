@@ -17,7 +17,7 @@ A user interface (UI) framework is a set of tools that helps developers build we
 
 In our final project, we made a page to show club information. Here's a part of the code I wrote:
 
-```tsx
+```
 <Row className="align-items-center mb-3">
   <Col xs="auto">
     <Image
@@ -44,7 +44,7 @@ In our final project, we made a page to show club information. Here's a part of 
     </div>
   </Col>
 </Row>
-
+```
 With React-Bootstrap, we didn’t need to write a lot of CSS. It was much faster to build and easier to understand. I also learned that UI frameworks are not just for websites. They are used in desktop and mobile apps too, like in Electron or React Native. So this is a very useful skill.
 Development Tools Help Projects Run Smoothly
 
