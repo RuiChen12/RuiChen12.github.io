@@ -5,7 +5,7 @@ type: essay
 title: "Effort Estimation and Tracking "
 # All dates must be YYYY-MM-DD format!
 date: 2025-05-08
-published: false
+published: true
 labels:
   - Questions
   - Answers
