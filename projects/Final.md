@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/uhgroupings_logo.png
+image: img/final.png
 title: "ManoaConnect"
 date: 05-08-2025
 published: true
