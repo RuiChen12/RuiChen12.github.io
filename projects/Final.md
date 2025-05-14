@@ -76,25 +76,7 @@ After a new club is created is displayed on the screen as a `ClubCard`. Each car
 
 Query parameters are key-value pairs added to the end of a URL. Next.js allows us to **pass data between pages** without using a global state or database. This makes the website faster and more efficient for small data transfers, like showing club info on different pages.
 
-For example, when a user clicks on a club card, we use the `Link` component from Next.js to go to `/clubs/profile` and include the club’s data as query parameters:
-
-```tsx
-Link
-  href=
-    pathname: clubs/profile,
-    query: {
-      name: club.name,
-      description: club.description,
-      image: club.image,
-      creator: club.creator,
-      email: club.email,
-    },
-
-
-  <Card.Img src={club.image} />
-</Link>
-```
-
+For example, when a user clicks on a club card, we use the `Link` component from Next.js to go to `/clubs/profile` and include the club’s data as query parameters
 
 This creates a URL like:
 ```
