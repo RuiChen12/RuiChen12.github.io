@@ -14,8 +14,24 @@ summary: "Manoa Connect is a centralized platform for students at the University
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/uhgrouping.png" class="img-thumbnail" >
+  <img width="200px" src="../img/admin_page.png" class="img-thumbnail" >
 </div>
+<div class="text-center p-4">
+  <img width="200px" src="../img/explore_clubs.png" class="img-thumbnail" >
+</div>
+<div class="text-center p-4">
+  <img width="200px" src="../img/explore_posts.png" class="img-thumbnail" >
+</div>
+<div class="text-center p-4">
+  <img width="200px" src="../img/feedback.png" class="img-thumbnail" >
+</div>
+<div class="text-center p-4">
+  <img width="200px" src="../img/home.png" class="img-thumbnail" >
+</div>
+<div class="text-center p-4">
+  <img width="200px" src="../img/land.png" class="img-thumbnail" >
+</div>
+
 
 ## My Contribution: Club Creation and Viewing
 
