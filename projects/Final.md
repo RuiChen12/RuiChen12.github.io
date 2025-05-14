@@ -79,9 +79,9 @@ Query parameters are key-value pairs added to the end of a URL. Next.js allows u
 For example, when a user clicks on a club card, we use the `Link` component from Next.js to go to `/clubs/profile` and include the club’s data as query parameters:
 
 ```tsx
-<Link
-  href={
-    pathname: '/clubs/profile',
+Link
+  href=
+    pathname: clubs/profile,
     query: {
       name: club.name,
       description: club.description,
@@ -89,8 +89,8 @@ For example, when a user clicks on a club card, we use the `Link` component from
       creator: club.creator,
       email: club.email,
     },
-  }
->
+
+
   <Card.Img src={club.image} />
 </Link>
 ```
