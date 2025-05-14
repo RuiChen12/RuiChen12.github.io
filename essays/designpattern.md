@@ -4,7 +4,7 @@ type: essay
 title: "Building with Patterns: Why Good Websites Are Like Good Cities"
 # All dates must be YYYY-MM-DD format!
 date: 2025-4-24
-published: true
+published: false
 labels:
   - Software enginnering
   - Front-End
