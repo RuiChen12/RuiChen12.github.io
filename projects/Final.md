@@ -80,7 +80,7 @@ For example, when a user clicks on a club card, we use the `Link` component from
 
 ```tsx
 <Link
-  href={{
+  href={
     pathname: '/clubs/profile',
     query: {
       name: club.name,
@@ -89,7 +89,7 @@ For example, when a user clicks on a club card, we use the `Link` component from
       creator: club.creator,
       email: club.email,
     },
-  }}
+  }
 >
   <Card.Img src={club.image} />
 </Link>
