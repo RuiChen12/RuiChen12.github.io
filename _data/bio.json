@@ -1,111 +1,141 @@
 {
   "basics": {
     "name": "Rui Chen",
-    "label": "Student",
+    "label": "Computer Science Student",
     "picture": "https://github.com/RuiChen12.png",
     "email": "ruichen@hawaii.edu",
     "phone": "808-356-9494",
     "website": "https://RuiChen12.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2027.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "summary": "Computer Science student at the University of Hawaiʻi with hands-on experience building and maintaining production web systems, developing RESTful APIs, and validating system correctness. Interested in software engineering, testing, and reliable systems.",
+    "location": {
+      "address": "",
+      "postalCode": "96813",
+      "city": "Honolulu",
+      "countryCode": "USA",
+      "region": "Hawaiʻi"
+    },
     "profiles": [
-      { "network": "github", "username": "RuiChen12", "url": "http://github.com/RuiChen12" },
-      { "network": "linkedin", "username": "Rui Chen", "url": "https://www.linkedin.com/in/rui-chen-04679b292/" }
+      {
+        "network": "github",
+        "username": "RuiChen12",
+        "url": "https://github.com/RuiChen12"
+      },
+      {
+        "network": "linkedin",
+        "username": "Rui Chen",
+        "url": "https://www.linkedin.com/in/rui-chen-04679b292/"
+      }
     ]
   },
+
   "interests": [
-    { "name": "Software Enginnering" },
-    { "name": "AI" },
+    { "name": "Software Engineering" },
+    { "name": "AI Systems" },
     { "name": "Web Development" }
   ],
+
   "skills": [
     {
-      "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "React", "Ocaml", "Next.js"]
+      "name": "Programming Languages",
+      "keywords": ["Java", "JavaScript", "TypeScript", "OCaml", "C", "C++"]
     },
     {
-      "name": "Toolsets/OS",
-      "keywords": [ "Windows11", "Git/GitHub","IntelliJ", "VS code"]
+      "name": "Frontend Frameworks",
+      "keywords": ["React", "Next.js", "AngularJS"]
+    },
+    {
+      "name": "Backend & APIs",
+      "keywords": ["Spring Boot", "RESTful APIs"]
+    },
+    {
+      "name": "Tools",
+      "keywords": ["Git", "GitHub", "VS Code", "IntelliJ", "Swagger", "Isabelle"]
     }
   ],
+
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2027)",
+      "institution": "University of Hawaiʻi at Mānoa",
+      "area": "Computer Science",
       "studyType": "B.S.",
       "startDate": "2023-08-01",
-      "endDate": "Present",
-      "courses": [
-      ]
+      "endDate": "Expected Spring 2027"
     }
   ],
+
   "work": [
     {
-      "company": "UH Information Technology Services",
-      "position": "Web Developer",
+      "company": "University of Hawaiʻi Information Technology Services",
+      "position": "Web Developer (UH Groupings)",
       "website": "https://www.hawaii.edu/its/uhgroupings/",
       "startDate": "2024-08-01",
       "endDate": "Present",
-      "summary": "developer of UH groupings",
+      "summary": "Full-stack developer for UH Groupings, a university-wide group and access management system.",
       "highlights": [
-        "Developed and optimized web applications using React and Next.js, focusing on responsive interfaces, state management, and seamless client-server communication.",
-        "Refactored and implemented RESTful APIs with a Java backend, ensuring smooth integration and robust performance for frontend applications."
+        "Built and maintained full-stack web features using AngularJS, React, Next.js, and Spring Boot for university group management tools",
+        "Implemented user-facing workflows for managing members, preferences, and sync destinations, including optimistic UI updates to improve responsiveness",
+        "Developed REST APIs in Spring Boot using controller and service layers, and converted backend Grouper results into clean JSON responses for the UI",
+        "Used Swagger to test and verify API behavior while developing frontend service calls",
+        "Worked in a collaborative GitHub environment using branches, pull requests, and code reviews",
+        "Tested frontend and backend changes across success and error cases and contributed to internal technical documentation"
       ]
     },
     {
-      "company": "UH Information Technology Services",
+      "company": "University of Hawaiʻi Information Technology Services",
       "position": "Undergraduate Research Assistant",
-      "website": "http://www.hawaii.edu/its/",
+      "website": "https://www.hawaii.edu/its/",
       "startDate": "2024-03-15",
-      "endDate": "Present",
-      "summary": "Formally verified the correctness of an OCaml-based file system using Isabelle",
+      "endDate": "2025-01-31",
+      "summary": "Worked on system correctness and reliability for an OCaml-based file system.",
       "highlights": [
-        "Modeled and proved system invariants and properties, ensuring file operations and data integrity",
-        "Validated block-level management to guarantee consistent and error-free behavior"
+        "Analyzed and tested the correctness of an OCaml-based file system using Isabelle",
+        "Checked system rules to ensure file operations preserved data consistency",
+        "Reviewed block-level storage logic to prevent invalid states and data corruption",
+        "Identified edge cases early to improve overall system reliability"
       ]
     }
   ],
+
   "volunteer": [
     {
-      "organization": "Bishop Mesesum",
-      "website": "",
-      "position": "Volunteer of Botanical Department",
-      "startDate": "2022-06-01",
-      "endDate": "2022-07-29",
-      "summary": "Digitization specialist for plant specimen collections",
+      "organization": "Bishop Museum",
+      "position": "Botanical Volunteer",
+      "startDate": "2021-08-01",
+      "endDate": "2023-05-31",
+      "summary": "Digitized botanical specimen collections for research and public access.",
       "highlights": [
-        "Classify and catalog large collections of plant specimens",
-        "Photograph and digitize specimens to create online archives for researchers and the public"
+        "Classified, cataloged, photographed, and digitized large collections of plant specimens",
+        "Created digital archives accessible to researchers and the public"
       ]
     },
     {
-      "organization": "Kalani High School",
-      "website": "",
-      "position": "Member of Robotics Club",
+      "organization": "Kalani High School Robotics Club",
+      "position": "Programming Team Member",
       "startDate": "2021-01-07",
       "endDate": "2023-05-20",
-      "summary": "Collaborated with teammates to develop and optimize robotic control systems",
+      "summary": "Worked on robot control logic for autonomous and manual operation modes.",
       "highlights": [
-        "Wrote and debugged code in Android Studio to enhance robot movement control",
-        "Optimized robotic performance through detailed testing and troubleshooting",
-        "Worked closely with a team to ensure seamless integration of hardware and software components"
+        "Implemented robot control logic for both autonomous and manual modes",
+        "Programmed time-based actions in autonomous mode, including movement and arm activation",
+        "Built configuration logic mapping user inputs to robot movement commands",
+        "Tested and debugged robot behavior to ensure reliable task execution"
       ]
     }
   ],
+
   "awards": [
     {
       "title": "B+ Scholarship",
-      "date": "2024-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
+      "date": "2024–Present",
+      "awarder": "State of Hawaiʻi"
     },
     {
-      "title": "The Arakawa Science, Technology Engineering and Math Endowed Scholarship",
-      "date": "2024 fall and 2025 spring",
-      "awarder": "University of Hawaii",
-      "summary": "Glen Y. Arakawa, a 1969 UH College of Engineering graduate, built a career in radar systems and microelectronics before transitioning to real estate investment in 1982. A strong supporter of STEM education, he established a scholarship endowment to assist future scientists and engineers."
+      "title": "Arakawa STEM Endowed Scholarship",
+      "date": "Fall 2024 – Spring 2025",
+      "awarder": "University of Hawaiʻi"
     }
   ],
+
   "references": [
     {
       "name": "Available upon request"
